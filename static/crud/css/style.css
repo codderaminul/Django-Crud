@@ -1,0 +1,26 @@
+#id_choice,#id_multichoice{
+    display:inline-flex;
+    margin:20px 0px 20px 20px;
+
+}
+.Choice label ,.Multichoice{
+    font-size:25px;
+    color:gray;
+}
+#id_choice label{
+
+}
+#id_choice_1,#id_multichoice_1,#id_multichoice_2{
+    margin-left:20px;
+}
+
+.DateField label ,.TimeField label,.DatetimeField label{
+    display:block;
+    margin-top:20px;
+}
+.DateField input, .TimeField input, .DatetimeField input{
+    width:835px;
+    height:38px;
+    border-outline:1px solid gray;
+}
+
