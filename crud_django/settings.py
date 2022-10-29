@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'bootstrap_datepicker_plus',
     "bootstrap4",
-
+    "whitenoise.runserver_nostatic",
 
 ]
 
@@ -139,7 +139,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
 #MEDIA_ROOT = os.path.join(BASE_DIR,'crud/static/crud/files/img')
