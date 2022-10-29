@@ -145,6 +145,7 @@ STATIC_URL = 'static/'
 #MEDIA_ROOT = os.path.join(BASE_DIR,'crud/static/crud/files/img')
 #MEDIA_RUL = '/seen/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'crud_django/static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
