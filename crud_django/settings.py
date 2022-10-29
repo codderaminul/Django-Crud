@@ -145,7 +145,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 #MEDIA_ROOT = os.path.join(BASE_DIR,'crud/static/crud/files/img')
 #MEDIA_RUL = '/seen/'
 
-#STATICFILES_DIRS = [os.path.join(BASE_DIR,'crud/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'staticfiles')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Default primary key field type
