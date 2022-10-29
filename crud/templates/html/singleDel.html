@@ -1,0 +1,30 @@
+{% extends '../html/base.html' %}
+{% block title %}SetUp File {% endblock %}
+{% load static %}
+{% block content %}
+<div class="bg-dark">
+        <div class="container">
+            <table class="table text-light">
+                <thead>
+                    <tr>
+                        <th>Image Name</th>
+                        <th>Image</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                {% for i in forms %}
+                <tbody>
+                <tr>
+                    <td>{{ i.imgname  }}</td>
+                    <td> <img src="{{ i.myImg  }}" style="width: 50px;height:50px;"/></td>
+                    <td><a href="/crud/update/updateSingleImg/{{ i.id }}">Edit</a></td>
+
+                    <td> <a href="/crud/delete/singleFileDel/{{ i.id }}" class="btn btn-primary">Delete</a></td>
+                </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+</div>
+{% endblock %}l>

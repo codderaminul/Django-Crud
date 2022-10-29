@@ -1,0 +1,45 @@
+{% extends '../html/base.html' %}
+
+{% block title %}SetUp Text {% endblock %}
+{% load static %}
+
+{% block content %}
+    <div class="bg-dark ">
+        <div class="container">
+            <table class="table text-light">
+                <thead>
+                        <tr>
+                                <th>Charecter Field</th>
+                                <th>Text Field</th>
+                                <th>Date Field</th>
+                                <th>Time Field</th>
+                                <th>Email Field</th>
+                                <th>Duration Field</th>
+                                <th>Json Field</th>
+                                <th>Image Field</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                        </tr>
+                </thead>
+                {% for i in forms %}
+                <tbody>
+                <tr>
+                        <td> {{ i.characterField }}</td>
+                        <td> {{ i.textField }} </td>
+                        <td> {{ i.dateField }} </td>
+                        <td> {{ i.timeField }} </td>
+                        <td> {{ i.emailField }} </td>
+                        <td> {{ i.durationField }} </td>
+                        <td> {{ i.jsonField }} </td>
+                        <td> <img src="{{ i.image  }}" style="width: 50px;height:50px;"/></td>
+                        <td><a href="/crud/editSetText/{{ i.id }}">Edit</a></td>
+                        <td><a href="/crud/deleteSetText/{{ i.id }}">Delete</a></td>
+
+                </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

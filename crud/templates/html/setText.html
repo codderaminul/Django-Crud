@@ -1,0 +1,34 @@
+{% extends '../html/base.html' %}
+
+{% block title %}SetUp Text {% endblock %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+    <div class="container">
+        <h3 class="text-primary mt-3 mb-3">Text Form</h3>
+
+        {% if messages %}
+            {% for message in messages %}
+            <h5 class="text-success">{{message}}</h5>
+            {% endfor %}
+        {% endif %}
+
+
+
+      <form action="/crud/settext/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+          {% for field in forms.visible_fields %}
+          <div class="fieldWrapper form-group {{ field.label }}">
+
+              {{ field.errors}}
+              <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+              {{ field }}
+          </div>
+          {% endfor %}
+
+        <input class="btn btn-primary w-75 mt-3 mb-5" type="submit" value="Save">
+      </form>
+
+    </div>
+{% endblock %}

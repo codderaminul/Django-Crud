@@ -1,0 +1,30 @@
+{% extends '../html/base.html' %}
+
+{% block title %}Set Up Single File {% endblock %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="container">
+        <h3 class="text-primary mt-3 mb-3">Single File Form</h3>
+
+        {{ result }}
+
+      <form action="/crud/update/updateSingleImg/{{ id }}/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+          <div class="fieldWrapper form-group">
+              {{ form.imgname.errors}}
+              <label for="{{ form.imgname.id_for_label }}">{{ form.imgname.label }}</label>
+              {{ form.imgname }}
+          </div>
+          <div class="fieldWrapper form-group">
+              <img src="{{ url }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.myImg.id_for_label }}">{{ form.myImg.label }}</label>
+              {{ form.myImg }}
+          </div>
+
+        <input class="btn btn-primary w-100 mt-3 mb-5" type="submit" value="Update">
+      </form>
+    </div>
+{% endblock %}

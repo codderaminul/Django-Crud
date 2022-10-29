@@ -1,0 +1,49 @@
+{% extends '../html/base.html' %}
+{% block title %}SetUp File {% endblock %}
+{% load static %}
+{% block content %}
+<div class="bg-dark">
+        <div class="container">
+            <h3 class="text-success"> {{ dlt }}</h3>
+            <table class="table text-light">
+                <thead>
+                    <tr>
+                        <th>JPG Image</th>
+                        <th>PNG Image</th>
+                        <th>Audio</th>
+                        <th>Video</th>
+                        <th>PDF</th>
+                        <th>Text</th>
+                        <th>Doc</th>
+                        <th>Html</th>
+                        <th>Css</th>
+                        <th>Java</th>
+                        <th>Psd</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+
+                    </tr>
+                </thead>
+                {% for i in forms %}
+                <tbody>
+                <tr>
+                        <td> <img src="{{ i.jpg_image  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <img src="{{ i.png_image  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <img src="{{ i.jpg_image  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <img src="{{ i.png_image  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <iframe src="{{ i.pdf  }}" style="width: 50px;height:50px;"></iframe></td>
+                        <td> <img src="{{ i.text  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <img src="{{ i.doc  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <img src="{{ i.html  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <img src="{{ i.css  }}" style="width: 50px;height:50px;"/></td>
+                        <td> <a href="{{ i.java  }}" style="width: 50px;height:50px;">JS</a></td>
+                        <td> <img src="{{ i.psd  }}" style="width: 50px;height:50px;"/></td>
+                        <td><a href="/crud/update_files/{{ i.id }} " class="btn btn-primary">Edit</a></td>
+                        <td> <a href="/crud/delete/setFile/{{ i.id }}" class="btn btn-primary">Delete</a></td>
+                </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends '../html/base.html' %}
+
+{% block title %}Set Up Files {% endblock %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="container">
+        <h3 class="text-primary mt-3 mb-3">Update Files Form</h3>
+
+        {{ result }}
+
+      <form action="/crud/update_files/{{ id }}/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+          <div class="form-group">
+              {{ form.imgname.errors}}
+              <img src="{{ jpg }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.jpg_image.id_for_label }}">{{ form.jpg_image.label }}</label>
+              {{ form.jpg_image }}
+          </div>
+          <div class="form-group">
+              <img src="{{ png }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.png_image.id_for_label }}">{{ form.png_image.label }}</label>
+              {{ form.png_image }}
+          </div>
+          <div class="form-group">
+              <img src="{{ audio }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.audio.id_for_label }}">{{ form.audio.label }}</label>
+              {{ form.audio }}
+          </div>
+          <div class="form-group">
+              <img src="{{ video }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.video.id_for_label }}">{{ form.video.label }}</label>
+              {{ form.video }}
+          </div>
+          <div class="form-group">
+              <img src="{{ pdf }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.pdf.id_for_label }}">{{ form.pdf.label }}</label>
+              {{ form.pdf }}
+          </div>
+          <div class="form-group">
+              <img src="{{ text }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.text.id_for_label }}">{{ form.text.label }}</label>
+              {{ form.text }}
+          </div>
+          <div class="form-group">
+              <img src="{{ doc }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.doc.id_for_label }}">{{ form.doc.label }}</label>
+              {{ form.doc }}
+          </div>
+          <div class="form-group">
+              <img src="{{ html }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.html.id_for_label }}">{{ form.html.label }}</label>
+              {{ form.html }}
+          </div>
+          <div class="form-group">
+              <img src="{{ css }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.css.id_for_label }}">{{ form.css.label }}</label>
+              {{ form.css }}
+          </div>
+          <div class="form-group">
+              <img src="{{ java }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.java.id_for_label }}">{{ form.java.label }}</label>
+              {{ form.java }}
+          </div>
+          <div class="form-group">
+              <img src="{{ psd }}" style="height:60px;width:70px;" class="mt-5 mb-3 d-block"/>
+              <label for="{{ form.psd.id_for_label }}">{{ form.psd.label }}</label>
+              {{ form.psd }}
+          </div>
+
+        <input class="btn btn-primary w-100 mt-3 mb-5" type="submit" value="Update">
+      </form>
+    </div>
+{% endblock %}l>
