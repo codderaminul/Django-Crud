@@ -1,1 +1,1 @@
-web: gunicorn demo.wsgi --log-file -
+web: sh setup.sh && streamlit run app.py
