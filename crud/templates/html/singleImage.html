@@ -5,6 +5,11 @@
 
 {% block content %}
     <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+            <h5 class="text-success">{{message}}</h5>
+            {% endfor %}
+        {% endif %}
         <h4 class="text-success mt-4">{{ result }}</h4>
         <h3 class="text-secondary mt-3 mb-3">Single File Form</h3>
       <form action="/crud/upload_single_file/" method="POST" enctype="multipart/form-data">
