@@ -203,10 +203,9 @@ def saveSingleImg(request):
                 Path = handle_single_image(request.FILES['myImg'])
                 save = singleImage(imgname=request.POST['imgname'],myImg=Path)
                 save.save()
-                result = "Save Successfully"
                 messages.success(request,"Data Save Successfully")
                 form = singleImgForm()
-                return render(request, "html/singleImage.html", {"form": form,"result":result})
+                return render(request, "html/singleImage.html", {"form": form})
         except:
             messages.error(request,"some error")
             form = singleImgForm()
