@@ -11,9 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import django_heroku
@@ -48,8 +46,8 @@ INSTALLED_APPS = [
     'bootstrap_datepicker_plus',
     "bootstrap4",
     "whitenoise.runserver_nostatic",
-    'cloudinary_storage',
-    'cloudinary',
+    #'cloudinary_storage',
+    #'cloudinary',
 
 ]
 
