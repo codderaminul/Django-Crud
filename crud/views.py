@@ -198,18 +198,15 @@ def view_singleFile(request):
 def saveSingleImg(request):
     if request.method == "POST":
         data = singleImgForm(request.POST,request.FILES)
-        try:
-            if data.is_valid:
-                Path = handle_single_image(request.FILES['myImg'])
-                save = singleImage(imgname=request.POST['imgname'],myImg=Path)
-                save.save()
-                messages.success(request,"Data Save Successfully")
-                form = singleImgForm()
-                return render(request, "html/singleImage.html", {"form": form})
-        except:
-            messages.error(request,"some error")
+
+        if data.is_valid:
+            Path = handle_single_image(request.FILES['myImg'])
+            save = singleImage(imgname=request.POST['imgname'],myImg=Path)
+            save.save()
+            messages.success(request,"Data Save Successfully")
             form = singleImgForm()
             return render(request, "html/singleImage.html", {"form": form})
+
     form = singleImgForm()
     return render(request, "html/singleImage.html", {"form": form})
 
