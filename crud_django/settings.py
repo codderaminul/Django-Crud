@@ -66,7 +66,7 @@ ROOT_URLCONF = 'crud_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'crud')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,27 +79,14 @@ TEMPLATES = [
     },
 ]
 
-TEMPLATE_DIRS = [
-    os.path.join(os.path.dirname(__file__),'templates').replace('\\','/')
-]
+
 
 WSGI_APPLICATION = 'crud_django.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'crud',
-        'USER': 'root',
-        'PASSWORD': '1117640769',
-        'HOST':'localhost',
-        'PORT': '3306',
-    }
-}
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
