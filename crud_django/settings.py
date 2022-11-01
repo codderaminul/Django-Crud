@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-e&ytxc37ki(erokxuh1mo_$9f3s-3%)n58o@j=xbpkh#*9fh55
 #SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['own-online-course.herokuapp.com','127.0.0.1']
 
@@ -147,7 +147,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = BASE_DIR/'static'
 STATIC_URL = 'static/'
 
 #MEDIA_ROOT = os.path.join(BASE_DIR,'crud/static/crud/files/img')
