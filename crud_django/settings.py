@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-e&ytxc37ki(erokxuh1mo_$9f3s-3%)n58o@j=xbpkh#*9fh55'
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'django-insecure-e&ytxc37ki(erokxuh1mo_$9f3s-3%)n58o@j=xbpkh#*9fh55'
+#SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -153,7 +153,7 @@ STATIC_URL = 'static/'
 #MEDIA_ROOT = os.path.join(BASE_DIR,'crud/static/crud/files/img')
 #MEDIA_RUL = '/seen/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static/crud')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
