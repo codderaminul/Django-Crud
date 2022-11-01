@@ -147,13 +147,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = 'static/'
 
 #MEDIA_ROOT = os.path.join(BASE_DIR,'crud/static/crud/files/img')
 #MEDIA_RUL = '/seen/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'staticfiles/crud/')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'staticfiles/mycrud/static/')]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
