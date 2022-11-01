@@ -4,7 +4,7 @@ import os,uuid
 
 def handle_single_image(f):
     st = str(uuid.uuid4())
-    with open('https://own-online-course.herokuapp.com/staticfiles/mycrud/static/crud/files/img/' + "_" + st + ".jpg", 'wb+') as destination:
+    with open('crud/static/crud/files/img/' + "_" + st + ".jpg", 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
             viewPath = '/static/crud/files/img/' + "_" + st + ".jpg"
